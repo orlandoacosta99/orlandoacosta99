@@ -1,4 +1,4 @@
-# 💻 Desarrollador Fullstack | Especialista en Microsoft Power Platform | Ingeniero de Sistemas
+# 💻 Ingeniero de Sistemas | Desarrollador Fullstack | Especialista en Microsoft Power Platform 
 
 Lideré el diseño, desarrollo e implementación de soluciones digitales enfocadas en la eficiencia operativa y la transformación digital, utilizando herramientas de **Microsoft Power Platform** para optimizar procesos y potenciar la toma de decisiones basada en datos.
 
