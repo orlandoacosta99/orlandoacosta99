@@ -1,29 +1,37 @@
-# 💻 Ingeniero de Sistemas | Desarrollador Fullstack | Especialista en Microsoft Power Platform 
+# 💻 Ingeniero de Sistemas | Líder de Proyectos | Power Platform & Microsoft Fabric | Arquitecto DevOps Cloud
 
-Lideré el diseño, desarrollo e implementación de soluciones digitales enfocadas en la eficiencia operativa y la transformación digital, utilizando herramientas de **Microsoft Power Platform** para optimizar procesos y potenciar la toma de decisiones basada en datos.
-
----
-
-## 🔹 Principales responsabilidades y logros
-
-- **Power Apps:** Diseño y desarrollo de aplicaciones personalizadas para digitalizar procesos manuales, mejorando la experiencia del usuario final y la productividad del equipo.  
-- **Power Automate:** Automatización de flujos de trabajo críticos, reduciendo tiempos operativos y minimizando errores manuales.  
-- **Power BI:** Creación de dashboards interactivos para el monitoreo de indicadores clave (KPI’s), fortaleciendo la gestión estratégica basada en datos.  
-- **Administración de intranet corporativa:** Gestión, optimización, actualizaciones y control de accesos para garantizar un entorno digital seguro y eficiente.
+Ingeniero de Sistemas y Arquitecto DevOps Cloud con más de 5 años de experiencia liderando proyectos de transformación digital en los sectores salud, turismo y servicios financieros. Experto en traducir necesidades de negocio en soluciones técnicas escalables y de alto valor. Gestión de equipos multidisciplinarios (5–15 miembros) bajo metodologías ágiles (Scrum / Kanban) y responsabilidad en proyectos end-to-end: planificación, ejecución y entrega de valor medible, optimización de costos y decisiones basadas en datos.
 
 ---
 
-## 🔹 Perfil Técnico
+## 🔹 Competencias clave
 
-- **Desarrollo Fullstack:** Experiencia en JavaScript, Java, CSS, Node.js, React, C#, y bases de datos SQL, MongoDB y SQL Server.  
-- **Control de versiones:** Manejo avanzado de Git y GitHub.  
-- **Metodologías Ágiles:** Desarrollo de documentación en Azure DevOps, aplicando **Scrum** y **Lean**, junto con buenas prácticas de arquitectura, calidad y mantenimiento de software.  
-- **Análisis de datos:** Experiencia en consolidación de información empresarial para la creación de KPI’s y dashboards estratégicos.
+- **Plataformas Microsoft:** Power Apps (Canvas & Model-driven), Power Automate (Cloud Flows & RPA), Power BI & DAX, Microsoft Fabric, SharePoint Online, Dynamics 365, Microsoft Graph  
+- **Cloud & DevOps:** Azure DevOps, AWS (EC2, S3, DynamoDB), Terraform, Kubernetes, Docker, Docker Compose, CI/CD (GitLab CI / Azure Pipelines)  
+- **Desarrollo & APIs:** C#, .NET, JavaScript, Python, REST APIs, OAuth2, API Gateways, Microservices, YAML, JSON  
+- **Bases de datos:** SQL Server, MongoDB  
+- **ML & Data:** Microsoft Fabric, Power BI, DAX, fundamentos de TensorFlow  
+- **Otras tecnologías:** Git flows, Git, React, Laravel  
+- **Metodologías:** Scrum, Kanban, Agile  
+- **Habilidades transversales:** liderazgo de equipos, gestión de stakeholders, planificación estratégica, optimización de procesos, enfoque en entrega de valor
 
 ---
 
-## 🎯 Enfoque
+## 🎯 Enfoque profesional
 
-Innovación, calidad y liderazgo para crear soluciones que generen valor, mejoren procesos y fortalezcan la transformación digital en las organizaciones.
+Diseño e implementación de soluciones que:
+- Generan valor medible al negocio  
+- Mejoran procesos operativos y reducen costos  
+- Aprovechan arquitecturas cloud escalables y seguras  
+- Promueven la cultura DevOps y la gobernanza de datos
 
+---
+
+## ✅ Logros destacados
+
+- Lideré la migración a soluciones Power Platform y Microsoft Fabric que redujeron tiempos de reporte en un **60%**, mejorando la toma de decisiones basada en datos.  
+- Implementé pipelines CI/CD y prácticas DevOps que disminuyeron el tiempo de despliegue en producción en **40%** y redujeron errores post-lanzamiento.  
+- Coordiné equipos multidisciplinarios en proyectos integrales para sectores de salud y financiero, garantizando cumplimiento normativo y continuidad operativa.
+
+---
 
