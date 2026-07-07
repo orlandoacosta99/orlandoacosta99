@@ -1,4 +1,4 @@
-# 💻 Ingeniero de Sistemas | Líder de Proyectos | Power Platform & Microsoft Fabric | Arquitecto DevOps Cloud
+# 💻 Ingeniero de Sistemas | Líder de Proyectos | Power Platform & Microsoft Fabric | Desarrollador DevOps Cloud
 
 Ingeniero de Sistemas y Arquitecto DevOps Cloud con más de 5 años de experiencia liderando proyectos de transformación digital en los sectores salud, turismo y servicios financieros. Experto en traducir necesidades de negocio en soluciones técnicas escalables y de alto valor. Gestión de equipos multidisciplinarios (5–15 miembros) bajo metodologías ágiles (Scrum / Kanban) y responsabilidad en proyectos end-to-end: planificación, ejecución y entrega de valor medible, optimización de costos y decisiones basadas en datos.
 <br>
