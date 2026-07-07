@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orlando Acosta — Ingeniero de Sistemas · Power Platform · DevOps Cloud</title>
+<meta name="description" content="Portafolio de Orlando Acosta: desarrollo web, Power Platform, Microsoft Fabric y DevOps Cloud.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F6F7FA;
+    --ink:#1B2233;
+    --ink-soft:#4A5468;
+    --violet:#5B2E91;   /* mundo Power Platform */
+    --teal:#0E7C7B;     /* datos / Power BI */
+    --line:#D9DDE7;
+    --card:#FFFFFF;
+    --radius:14px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation:none!important;transition:none!important}
+  }
+  body{
+    font-family:'IBM Plex Sans',system-ui,sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.6;
+    font-size:16.5px;
+  }
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+  /* ---------- Nav ---------- */
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(246,247,250,.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1040px;margin:0 auto}
+  .logo{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:.95rem;color:var(--ink);text-decoration:none}
+  .logo span{color:var(--violet)}
+  .nav-links{display:flex;gap:26px}
+  .nav-links a{color:var(--ink-soft);text-decoration:none;font-size:.92rem;font-weight:500}
+  .nav-links a:hover,.nav-links a:focus-visible{color:var(--violet)}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--violet);outline-offset:3px;border-radius:4px}
+
+  /* ---------- Hero ---------- */
+  header{padding:88px 0 72px;border-bottom:1px solid var(--line)}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;font-size:.8rem;letter-spacing:.08em;
+    color:var(--teal);text-transform:uppercase;margin-bottom:18px;
+  }
+  h1{
+    font-family:'Archivo',sans-serif;font-weight:900;
+    font-size:clamp(2.4rem,6vw,4.2rem);
+    line-height:1.03;letter-spacing:-.02em;margin-bottom:22px;
+  }
+  h1 em{font-style:normal;color:var(--violet)}
+  .hero-sub{max-width:640px;color:var(--ink-soft);font-size:1.1rem;margin-bottom:30px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{
+    display:inline-block;padding:12px 22px;border-radius:10px;
+    font-weight:600;font-size:.95rem;text-decoration:none;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn-primary{background:var(--violet);color:#fff}
+  .btn-ghost{border:1.5px solid var(--line);color:var(--ink);background:var(--card)}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(27,34,51,.12)}
+  .hero-stats{display:flex;gap:36px;margin-top:46px;flex-wrap:wrap}
+  .stat b{font-family:'Archivo',sans-serif;font-size:1.7rem;font-weight:900;display:block;color:var(--ink)}
+  .stat span{font-size:.85rem;color:var(--ink-soft)}
+
+  /* ---------- Secciones ---------- */
+  section{padding:72px 0;border-bottom:1px solid var(--line)}
+  h2{
+    font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(1.6rem,3.5vw,2.2rem);
+    letter-spacing:-.01em;margin-bottom:8px;
+  }
+  .section-lead{color:var(--ink-soft);max-width:620px;margin-bottom:40px}
+
+  /* ---------- Enfoque ---------- */
+  .enfoque-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+  .enfoque-item{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px;font-size:.95rem;color:var(--ink-soft);
+  }
+  .enfoque-item b{
+    display:block;font-family:'Archivo',sans-serif;font-weight:700;
+    color:var(--ink);font-size:1rem;margin-bottom:6px;
+  }
+  .enfoque-item::before{
+    content:"";display:block;width:28px;height:3px;border-radius:99px;
+    background:linear-gradient(90deg,var(--violet),var(--teal));margin-bottom:14px;
+  }
+
+  /* ---------- Proyectos web ---------- */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:26px;display:flex;flex-direction:column;gap:12px;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(27,34,51,.09)}
+  .card h3{font-family:'Archivo',sans-serif;font-weight:700;font-size:1.12rem}
+  .card p{font-size:.94rem;color:var(--ink-soft);flex:1}
+  .tags{display:flex;gap:8px;flex-wrap:wrap}
+  .tag{
+    font-family:'IBM Plex Mono',monospace;font-size:.72rem;
+    padding:3px 9px;border-radius:99px;border:1px solid var(--line);color:var(--ink-soft);
+  }
+  .card a.repo{
+    font-size:.88rem;font-weight:600;color:var(--violet);text-decoration:none;
+  }
+  .card a.repo:hover{text-decoration:underline}
+
+  /* ---------- Power Platform: flujo (elemento firma) ---------- */
+  .flow{position:relative;margin-top:10px}
+  .flow::before{
+    content:"";position:absolute;left:19px;top:8px;bottom:8px;width:2px;
+    background:linear-gradient(var(--violet),var(--teal));
+  }
+  .flow-step{position:relative;padding:0 0 44px 62px}
+  .flow-step:last-child{padding-bottom:0}
+  .node{
+    position:absolute;left:0;top:2px;width:40px;height:40px;border-radius:12px;
+    background:var(--card);border:2px solid var(--violet);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'IBM Plex Mono',monospace;font-weight:500;color:var(--violet);font-size:.85rem;
+  }
+  .flow-step:nth-child(even) .node{border-color:var(--teal);color:var(--teal)}
+  .flow-step h3{font-family:'Archivo',sans-serif;font-weight:700;font-size:1.2rem;margin-bottom:4px}
+  .flow-step .role{font-family:'IBM Plex Mono',monospace;font-size:.78rem;color:var(--teal);margin-bottom:12px}
+  .psi{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:8px}
+  .psi div{
+    background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;font-size:.92rem;
+  }
+  .psi b{display:block;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--violet);margin-bottom:6px}
+  .psi div:last-child b{color:var(--teal)}
+  .impact{font-weight:600;color:var(--ink)}
+
+  /* ---------- Stack ---------- */
+  .stack-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+  .stack-group{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  .stack-group h3{font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--teal);margin-bottom:12px}
+  .stack-group ul{list-style:none;font-size:.94rem;color:var(--ink-soft)}
+  .stack-group li{padding:4px 0}
+
+  /* ---------- Contacto ---------- */
+  .contact{background:var(--ink);color:#fff;border-radius:var(--radius);padding:52px 40px;text-align:center}
+  .contact h2{color:#fff}
+  .contact p{color:#C7CCDA;max-width:520px;margin:0 auto 28px}
+  .contact .btn-primary{background:#fff;color:var(--ink)}
+  footer{padding:34px 0;text-align:center;font-size:.85rem;color:var(--ink-soft)}
+
+  @media (max-width:640px){
+    .nav-links{display:none}
+    header{padding:60px 0 52px}
+    .flow::before{left:15px}
+    .node{width:32px;height:32px;border-radius:9px;font-size:.75rem}
+    .flow-step{padding-left:50px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="#top">orlando<span>@</span>acosta</a>
+    <div class="nav-links">
+      <a href="#enfoque">Enfoque</a>
+      <a href="#web">Desarrollo web</a>
+      <a href="#power">Power Platform</a>
+      <a href="#stack">Stack</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="wrap">
+    <p class="eyebrow">Ingeniero de Sistemas · Líder de Proyectos</p>
+    <h1>Convierto necesidades de negocio en <em>soluciones que se miden</em>.</h1>
+    <p class="hero-sub">
+      Más de 5 años liderando transformación digital en salud, turismo y servicios financieros
+      con Power Platform, Microsoft Fabric, desarrollo web y arquitectura DevOps Cloud.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#power">Ver proyectos</a>
+      <a class="btn btn-ghost" href="https://github.com/orlandoacosta99" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/oacosta99/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><b>−60%</b><span>tiempos de reporte con Fabric + Power BI</span></div>
+      <div class="stat"><b>−40%</b><span>tiempo de despliegue con CI/CD</span></div>
+      <div class="stat"><b>5–15</b><span>personas en equipos liderados (Scrum/Kanban)</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="enfoque">
+  <div class="wrap">
+    <h2>Enfoque profesional</h2>
+    <p class="section-lead">
+      Experto en traducir necesidades de negocio en soluciones técnicas escalables.
+      Todo lo que diseño e implemento apunta a cuatro cosas:
+    </p>
+    <div class="enfoque-grid">
+      <div class="enfoque-item">
+        <b>Valor medible</b>
+        Cada proyecto se define y se entrega con métricas de negocio, no solo con features.
+      </div>
+      <div class="enfoque-item">
+        <b>Procesos más eficientes</b>
+        Mejoro operaciones y reduzco costos automatizando lo repetitivo y eliminando reprocesos.
+      </div>
+      <div class="enfoque-item">
+        <b>Cloud escalable y seguro</b>
+        Arquitecturas pensadas para crecer, con infraestructura como código y buenas prácticas de seguridad.
+      </div>
+      <div class="enfoque-item">
+        <b>Cultura DevOps y datos</b>
+        Promuevo entrega continua, gobernanza de datos y decisiones basadas en evidencia.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="web">
+  <div class="wrap">
+    <h2>Desarrollo web</h2>
+    <p class="section-lead">Proyectos con código abierto en GitHub. Cada uno resuelve un problema concreto de principio a fin.</p>
+    <div class="grid">
+      <article class="card">
+        <h3>RegistroPQRS</h3>
+        <p>Sistema web para registro y gestión de peticiones, quejas, reclamos y sugerencias: formularios, trazabilidad de casos y panel de seguimiento. <!-- Personaliza: ¿para qué entidad? ¿cuántos casos gestiona? --></p>
+        <div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">CRUD</span></div>
+        <a class="repo" href="https://github.com/orlandoacosta99/RegistroPQRS" target="_blank" rel="noopener">Ver código →</a>
+      </article>
+      <article class="card">
+        <h3>AdresBot</h3>
+        <p>Bot en Python que automatiza consultas al sistema ADRES, eliminando la verificación manual de afiliaciones en salud. <!-- Personaliza: ¿cuántas consultas/hora automatiza? --></p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Automatización</span><span class="tag">Scraping</span></div>
+        <a class="repo" href="https://github.com/orlandoacosta99/AdresBot" target="_blank" rel="noopener">Ver código →</a>
+      </article>
+      <article class="card">
+        <h3>Conversor Markdown</h3>
+        <p>Herramienta en Python para convertir documentos a Markdown, pensada para flujos de documentación técnica reproducibles.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">CLI</span><span class="tag">Docs</span></div>
+        <a class="repo" href="https://github.com/orlandoacosta99/conversor_markdown" target="_blank" rel="noopener">Ver código →</a>
+      </article>
+      <article class="card">
+        <h3>Bases de datos</h3>
+        <p>Colección de modelos y procedimientos en PL/pgSQL: diseño relacional, funciones almacenadas y buenas prácticas de PostgreSQL.</p>
+        <div class="tags"><span class="tag">PLpgSQL</span><span class="tag">PostgreSQL</span><span class="tag">Modelado</span></div>
+        <a class="repo" href="https://github.com/orlandoacosta99/bases_datos" target="_blank" rel="noopener">Ver código →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="power">
+  <div class="wrap">
+    <h2>Power Platform &amp; Microsoft Fabric</h2>
+    <p class="section-lead">
+      Estos proyectos viven en entornos corporativos, así que en lugar de código muestro
+      el caso completo: problema, solución e impacto medible.
+    </p>
+    <div class="flow">
+
+      <div class="flow-step">
+        <div class="node">01</div>
+        <h3>Migración de reportería a Microsoft Fabric</h3>
+        <p class="role">Power BI · Microsoft Fabric · DAX — Sector financiero</p>
+        <div class="psi">
+          <div><b>Problema</b>Reportes manuales en Excel que tomaban días en consolidarse y llegaban desactualizados a los comités de decisión.</div>
+          <div><b>Solución</b>Pipelines de datos en Fabric con modelos semánticos y dashboards de Power BI con actualización programada y medidas DAX reutilizables.</div>
+          <div><b>Impacto</b><span class="impact">Reducción del 60% en tiempos de reporte</span> y decisiones basadas en datos actualizados diariamente.</div>
+        </div>
+      </div>
+
+      <div class="flow-step">
+        <div class="node">02</div>
+        <h3>App de gestión operativa con Power Apps</h3>
+        <p class="role">Power Apps (Canvas) · Power Automate · SharePoint — Sector salud</p>
+        <div class="psi">
+          <div><b>Problema</b>Procesos operativos registrados en papel y correos: sin trazabilidad, con reprocesos y errores de transcripción. <!-- Reemplaza con tu caso real --></div>
+          <div><b>Solución</b>Canvas App conectada a SharePoint con flujos de aprobación en Power Automate y notificaciones automáticas a los responsables.</div>
+          <div><b>Impacto</b><span class="impact">[XX horas/semana ahorradas]</span> y trazabilidad completa del proceso con cumplimiento normativo.</div>
+        </div>
+      </div>
+
+      <div class="flow-step">
+        <div class="node">03</div>
+        <h3>RPA y flujos cloud para tareas repetitivas</h3>
+        <p class="role">Power Automate (Cloud Flows &amp; RPA) · Microsoft Graph</p>
+        <div class="psi">
+          <div><b>Problema</b>Tareas repetitivas de alto volumen (validaciones, cruces de datos, envío de documentos) ejecutadas manualmente por el equipo.</div>
+          <div><b>Solución</b>Flujos desatendidos con manejo de errores, reintentos y registro de auditoría, integrados vía Microsoft Graph.</div>
+          <div><b>Impacto</b><span class="impact">[N procesos automatizados]</span> liberando al equipo para tareas de mayor valor.</div>
+        </div>
+      </div>
+
+      <div class="flow-step">
+        <div class="node">04</div>
+        <h3>Pipelines CI/CD y cultura DevOps</h3>
+        <p class="role">Azure DevOps · GitLab CI · Terraform · Docker · Kubernetes</p>
+        <div class="psi">
+          <div><b>Problema</b>Despliegues manuales, lentos y propensos a errores post-lanzamiento.</div>
+          <div><b>Solución</b>Pipelines CI/CD con infraestructura como código (Terraform), contenedores y ambientes reproducibles.</div>
+          <div><b>Impacto</b><span class="impact">−40% en tiempo de despliegue</span> a producción y menos errores post-lanzamiento.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="stack">
+  <div class="wrap">
+    <h2>Stack técnico</h2>
+    <p class="section-lead">Herramientas con las que trabajo a diario, agrupadas por cómo las uso.</p>
+    <div class="stack-groups">
+      <div class="stack-group">
+        <h3>Microsoft &amp; Low-code</h3>
+        <ul>
+          <li>Power Apps (Canvas &amp; Model-driven)</li>
+          <li>Power Automate (Cloud &amp; RPA)</li>
+          <li>Power BI · DAX · Microsoft Fabric</li>
+          <li>SharePoint Online · Dynamics 365</li>
+          <li>Microsoft Graph</li>
+        </ul>
+      </div>
+      <div class="stack-group">
+        <h3>Cloud &amp; DevOps</h3>
+        <ul>
+          <li>Azure DevOps · GitLab CI · Azure Pipelines</li>
+          <li>AWS (EC2, S3, DynamoDB)</li>
+          <li>Terraform · Kubernetes · Docker · Docker Compose</li>
+          <li>Git flows · CI/CD · YAML</li>
+        </ul>
+      </div>
+      <div class="stack-group">
+        <h3>Desarrollo &amp; Datos</h3>
+        <ul>
+          <li>C# / .NET · Python · JavaScript</li>
+          <li>React · Laravel · REST APIs · OAuth2</li>
+          <li>SQL Server · PostgreSQL · MongoDB</li>
+          <li>Microservicios · API Gateways</li>
+          <li>Fundamentos de ML con TensorFlow</li>
+        </ul>
+      </div>
+      <div class="stack-group">
+        <h3>Gestión</h3>
+        <ul>
+          <li>Scrum · Kanban · Agile</li>
+          <li>Liderazgo de equipos (5–15)</li>
+          <li>Gestión de stakeholders</li>
+          <li>Optimización de procesos y costos</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" style="border-bottom:none">
+  <div class="wrap">
+    <div class="contact">
+      <h2>¿Trabajamos juntos?</h2>
+      <p>Si tu equipo necesita automatizar procesos, construir apps de negocio o llevar su reportería al siguiente nivel, hablemos.</p>
+      <a class="btn btn-primary" href="https://www.linkedin.com/in/oacosta99/" target="_blank" rel="noopener">Escríbeme en LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Orlando Acosta · 2026 · Hecho con HTML y CSS, sin frameworks.
+</footer>
+
+</body>
+</html>
